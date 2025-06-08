@@ -219,7 +219,7 @@ Come già detto, e come visto [qui](#esempio-di-flusso-di-dati), per usufruire d
  - **Lo statement** serve per comunicare al database tramite il server nell'endpoint `/query`. Si noti che per ogni statement è possibile eseguire una sola query, **ed ogni tentativo di [subquery](https://www.geeksforgeeks.org/sql-subquery/) o di uso di azioni peicolose (DROP, ALTER, CREATE, SLEEP, ...) rilevato viene tracciato e trattato come un tentato attacco informatico**. Inoltre, gli unici metodi permessi sono SELECT, INSERT, DELETE, UPDATE e COUNT. Si noti infine che lo statement viene accettato solo se in forma di `prepared statement`.
  - **Gli argomenti** in `/query` sono passati assieme allo statement sottoforma di array contenente i dati, usati poi dal server per costruire lo statement finale. Il contenuto di questo array deve essere di un elemento "table_name" e uno "more", si guardi sotto per capire meglio. Attenzione: il numero di argomenti deve corrispondere a quello dei ? nello statement inviato dal client.
 
-Ecco una tabella riassuntiva:
+### Tabella riassuntiva
 
 |Nome elemento|Scopo|Come si ottiene|
 |:--:|:--:|:--:|
